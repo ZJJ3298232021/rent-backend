@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.webzank.rent.mapper.HouseInfoMapper">
+
+    <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HouseInfo">
+            <id property="id" column="id" />
+            <result property="data" column="data" />
+            <result property="hdicDistrictName" column="hdic_district_name" />
+            <result property="rentPriceUnitListing" column="rent_price_unit_listing" />
+            <result property="rentArea" column="rent_area" />
+            <result property="payment" column="payment" />
+            <result property="areaCode" column="area_code" />
+            <result property="cityCode" column="city_code" />
+            <result property="provinceCode" column="province_code" />
+    </resultMap>
+
+
+</mapper>
