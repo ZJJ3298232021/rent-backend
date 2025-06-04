@@ -9,9 +9,35 @@ spring:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  mail:
+    # qq
+    host: smtp.qq.com
+    port: 465
+    username: 3298232021@qq.com
+    # 授权码
+    password: jvkardachitydcbj
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+  data:
+    redis:
+      database: 10
+      host: localhost
+      port: 6379
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: site.webzank.rent.pojo.entity
+  global-config:
+    banner: off

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import site.webzank.rent.pojo.vo.HouseVo;
 
 /**
  * 
@@ -66,4 +67,10 @@ public class HouseInfo {
      */
     @TableField(value = "province_code")
     private Integer provinceCode;
+
+    public HouseVo convertToVo() {
+        HouseVo houseVo = new HouseVo();
+        String data = this.data;
+
+    }
 }

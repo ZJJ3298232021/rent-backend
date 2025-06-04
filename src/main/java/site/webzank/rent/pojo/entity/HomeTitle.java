@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -24,7 +25,7 @@ public class HomeTitle {
      * 
      */
     @TableField(value = "image_url")
-    private String imageUrl;
+    private String imageURL;
 
     /**
      * 
@@ -36,5 +37,6 @@ public class HomeTitle {
      * 
      */
     @TableField(value = "sub_title")
+    @JsonProperty("sub_title")
     private String subTitle;
 }

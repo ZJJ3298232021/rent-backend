@@ -6,7 +6,6 @@ import lombok.Data;
  * @author zank
  */
 @Data
-public class LoginDto {
-    private String mail;
-    private String code;
+public class TagDto {
+    private String name;
 }

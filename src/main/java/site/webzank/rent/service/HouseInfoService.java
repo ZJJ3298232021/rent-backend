@@ -1,7 +1,10 @@
 package site.webzank.rent.service;
 
+import site.webzank.rent.common.result.PageResult;
+import site.webzank.rent.pojo.dto.PageSearchDto;
 import site.webzank.rent.pojo.entity.HouseInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import site.webzank.rent.pojo.vo.HouseVo;
 
 /**
 * @author zank
@@ -10,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface HouseInfoService extends IService<HouseInfo> {
 
+    PageResult<HouseVo> search(PageSearchDto dto);
 }

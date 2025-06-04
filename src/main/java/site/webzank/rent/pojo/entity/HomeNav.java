@@ -30,5 +30,5 @@ public class HomeNav {
      * 
      */
     @TableField(value = "image_url")
-    private String imageUrl;
+    private String imageURL;
 }

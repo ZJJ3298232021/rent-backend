@@ -1,7 +1,10 @@
 package site.webzank.rent.service;
 
+import site.webzank.rent.common.result.Result;
 import site.webzank.rent.pojo.entity.UserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import site.webzank.rent.pojo.vo.LoginVo;
+import site.webzank.rent.pojo.vo.UserInfoVo;
 
 /**
 * @author zank
@@ -9,5 +12,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2025-06-03 14:58:31
 */
 public interface UserInfoService extends IService<UserInfo> {
+    int sendMailCode(String mail);
 
+    Result<LoginVo> login(String mail, String code);
+
+    UserInfoVo getInfo();
 }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -13,6 +14,7 @@ import lombok.Data;
  */
 @TableName(value ="user_info")
 @Data
+@Builder
 public class UserInfo {
     /**
      * 
@@ -23,8 +25,8 @@ public class UserInfo {
     /**
      * 
      */
-    @TableField(value = "phone")
-    private String phone;
+    @TableField(value = "mail")
+    private String mail;
 
     /**
      * 

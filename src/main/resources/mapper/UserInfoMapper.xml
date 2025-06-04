@@ -6,7 +6,7 @@
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.UserInfo">
             <id property="id" column="id" />
-            <result property="phone" column="phone" />
+            <result property="mail" column="mail" />
             <result property="nickname" column="nickname" />
             <result property="img" column="img" />
     </resultMap>

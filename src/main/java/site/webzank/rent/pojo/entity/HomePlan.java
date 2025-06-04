@@ -24,5 +24,5 @@ public class HomePlan {
      * 
      */
     @TableField(value = "image_url")
-    private String imageUrl;
+    private String imageURL;
 }

@@ -1,5 +1,6 @@
 package site.webzank.rent.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import site.webzank.rent.pojo.entity.HouseInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2025-06-03 14:58:31
 * @Entity site.webzank.rent.pojo.entity.HouseInfo
 */
+@Mapper
 public interface HouseInfoMapper extends BaseMapper<HouseInfo> {
 
 }
