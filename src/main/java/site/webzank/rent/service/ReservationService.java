@@ -1,7 +1,12 @@
 package site.webzank.rent.service;
 
+import site.webzank.rent.pojo.dto.ReserveDto;
 import site.webzank.rent.pojo.entity.Reservation;
 import com.baomidou.mybatisplus.extension.service.IService;
+import site.webzank.rent.pojo.vo.HistoryVo;
+import site.webzank.rent.pojo.vo.ReservationVo;
+
+import java.util.List;
 
 /**
 * @author zank
@@ -10,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface ReservationService extends IService<Reservation> {
 
+    ReservationVo reserve(ReserveDto dto);
+
+    List<HistoryVo> history();
 }

@@ -34,13 +34,13 @@ public class MailService {
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>鸿蒙租房 - 验证码</title>
+                    <title>咕咕租房 - 验证码</title>
                 </head>
                 <body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f7f7f7; color: #333333;">
                     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                         <!-- 标题栏 -->
                         <div style="text-align: center; padding: 20px 0; border-bottom: 1px solid #eeeeee;">
-                            <h1 style="color: #e84c3d; margin: 0; font-size: 24px;">咕咕租房</h1>
+                            <h1 style="color: #1B81F6; margin: 0; font-size: 24px;">咕咕租房</h1>
                             <p style="color: #888888; margin: 5px 0 0;">让租房更简单</p>
                         </div>
                        \s
@@ -51,7 +51,7 @@ public class MailService {
                            \s
                             <!-- 验证码展示 -->
                             <div style="background-color: #f5f7fa; border-radius: 6px; text-align: center; padding: 15px; margin: 25px 0;">
-                                <p style="font-size: 32px; letter-spacing: 5px; font-weight: bold; color: #e84c3d; margin: 0;">
+                                <p style="font-size: 32px; letter-spacing: 5px; font-weight: bold; color: #1B81F6; margin: 0;">
                 """
                 + code +
                 """
@@ -59,7 +59,7 @@ public class MailService {
                             </div>
                            \s
                             <!-- 提示信息 -->
-                            <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 验证码有效期为<span style="color: #e84c3d; font-weight: bold;">5分钟</span>，请尽快完成验证。</p>
+                            <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 验证码有效期为<span style="color: #1B81F6; font-weight: bold;">5分钟</span>，请尽快完成验证。</p>
                             <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 如非本人操作，请忽略此邮件，并及时修改您的账户密码。</p>
                             <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 20px;">• 请勿将验证码泄露给他人，咕咕租房不会以任何理由要求您提供验证码。</p>
                            \s

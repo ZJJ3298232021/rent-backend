@@ -72,7 +72,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo>
             if (Objects.isNull(userInfo)) {
                 userInfo = UserInfo
                         .builder()
-                        .img("https://pic1.imgdb.cn/item/683ed79158cb8da5c8293b3f.png")
+                        .img("https://pic1.imgdb.cn/item/683ef7c158cb8da5c8294e41.png")
                         .nickname("小咕咕" + mail.substring(mail.indexOf("@") + 1, mail.indexOf(".")) + mail.substring(0, mail.indexOf("@")))
                         .mail(mail)
                         .build()
