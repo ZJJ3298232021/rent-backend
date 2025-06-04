@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import site.webzank.rent.common.result.PageResult;
 import site.webzank.rent.common.result.Result;
 import site.webzank.rent.mapper.HouseInfoMapper;
 import site.webzank.rent.pojo.dto.PageSearchDto;
 import site.webzank.rent.pojo.vo.HomeVo;
+import site.webzank.rent.pojo.vo.HouseDetailVo;
 import site.webzank.rent.pojo.vo.HouseVo;
 import site.webzank.rent.service.HouseInfoService;
 
@@ -18,12 +20,13 @@ import site.webzank.rent.service.HouseInfoService;
  */
 @RestController
 @Slf4j
+@RequestMapping("/house")
 @RequiredArgsConstructor
 public class HouseController {
     private final Gson gson;
     private final HouseInfoService houseInfoService;
 
-    @GetMapping("/house/nearbyHouses")
+    @GetMapping("/nearbyHouses")
     public Object nearbyHouses() {
         String data = """
                 {
@@ -234,5 +237,11 @@ public class HouseController {
     public Result<PageResult<HouseVo>> search(PageSearchDto dto) {
         log.info("搜索参数：{}", dto);
         return Result.success(houseInfoService.search(dto));
+    }
+
+    @GetMapping("/detail")
+    public Result<HouseDetailVo> detail(String id) {
+        log.info("查看详情参数：{}", id);
+        return Result.success(houseInfoService.detail(id));
     }
 }

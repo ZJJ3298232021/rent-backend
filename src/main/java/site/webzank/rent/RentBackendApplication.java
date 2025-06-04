@@ -3,6 +3,9 @@ package site.webzank.rent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author zank
+ */
 @SpringBootApplication
 public class RentBackendApplication {
 
