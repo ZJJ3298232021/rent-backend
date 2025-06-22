@@ -1,7 +1,10 @@
 package site.webzank.rent.pojo.vo;
 
 import lombok.Data;
-import site.webzank.rent.pojo.entity.*;
+import site.webzank.rent.pojo.entity.HomeBanner;
+import site.webzank.rent.pojo.entity.HomeNav;
+import site.webzank.rent.pojo.entity.HomePlan;
+import site.webzank.rent.pojo.entity.HomeTitle;
 
 import java.util.List;
 

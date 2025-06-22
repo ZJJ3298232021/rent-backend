@@ -5,10 +5,10 @@
 <mapper namespace="site.webzank.rent.mapper.UserInfoMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.UserInfo">
-            <id property="id" column="id" />
-            <result property="mail" column="mail" />
-            <result property="nickname" column="nickname" />
-            <result property="img" column="img" />
+        <id property="id" column="id"/>
+        <result property="mail" column="mail"/>
+        <result property="nickname" column="nickname"/>
+        <result property="img" column="img"/>
     </resultMap>
 
 </mapper>

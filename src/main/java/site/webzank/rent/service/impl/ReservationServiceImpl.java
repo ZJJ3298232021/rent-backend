@@ -54,7 +54,7 @@ public class ReservationServiceImpl extends ServiceImpl<ReservationMapper, Reser
                     .houseId(reservation.getHouseId())
                     .date(reservation.getDate())
                     .id(reservation.getId())
-                    .img("http://192.168.137.1:6060"+houseData
+                    .img("http://192.168.216.1:6060" + houseData
                             .getHousePicture()
                             .get(0)
                             .getPicList()

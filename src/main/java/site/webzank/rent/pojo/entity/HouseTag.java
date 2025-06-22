@@ -7,21 +7,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
- * 
  * @author zank
  * @TableName house_tag
  */
-@TableName(value ="house_tag")
+@TableName(value = "house_tag")
 @Data
 public class HouseTag {
     /**
-     * 
+     *
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     *
      */
     @TableField(value = "name")
     private String name;

@@ -42,7 +42,6 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
         queryWrapper.eq(dto.getDistrictCode() != null, HouseInfo::getAreaCode, dto.getDistrictCode());
         queryWrapper.ge(dto.getMinRent() != null, HouseInfo::getRentPriceUnitListing, dto.getMinRent());
         queryWrapper.le(dto.getMaxRent() != null, HouseInfo::getRentPriceUnitListing, dto.getMaxRent());
-//        queryWrapper.eq()
         queryWrapper.eq(dto.getPaymentType() != null && !dto.getPaymentType().isBlank(), HouseInfo::getPayment, dto.getPaymentType());
         Optional.ofNullable(dto.getOrderBy()).ifPresent(orderBy -> {
             if ("price".equals(orderBy)) {
@@ -80,7 +79,7 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
                 .peek(housePicture -> housePicture.setPicList(housePicture
                         .getPicList()
                         .stream()
-                        .map(pic -> pic.replace("localhost", "192.168.137.1"))
+                        .map(pic -> pic.replace("localhost", "192.168.216.1"))
                         .toList()
                 )).toList();
         houseDetailVo.setHousePicture(pictures);
@@ -91,7 +90,7 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
                 .peek(discount ->
                         discount
                                 .setImage(discount.getImage()
-                                        .replace("localhost", "192.168.137.1")))
+                                        .replace("localhost", "192.168.216.1")))
                 .toList();
         houseDetailVo.setDiscounts(disCounts);
         //处理HouseholdItem
@@ -99,7 +98,7 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
                 .getHouseholdItem()
                 .stream()
                 .peek(householdItem -> {
-                            List<Item> items = householdItem.getItemList().stream().peek(item -> item.setIcon(item.getIcon().replace("localhost", "192.168.137.1"))
+                            List<Item> items = householdItem.getItemList().stream().peek(item -> item.setIcon(item.getIcon().replace("localhost", "192.168.216.1"))
                             ).toList();
                             householdItem.setItemList(items);
                         }
@@ -113,7 +112,7 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
                         .setImage(
                                 support
                                         .getImage()
-                                        .replace("localhost", "192.168.137.1")
+                                        .replace("localhost", "192.168.216.1")
                         )
                 )
                 .toList();
@@ -122,7 +121,7 @@ public class HouseInfoServiceImpl extends ServiceImpl<HouseInfoMapper, HouseInfo
         List<RentInfo> rentInfos = houseDetailVo.getRentInfo().stream().peek(rentInfo -> rentInfo.setImage(
                 rentInfo
                         .getImage()
-                        .replace("localhost", "192.168.137.1")
+                        .replace("localhost", "192.168.216.1")
         )).toList();
         houseDetailVo.setRentInfo(rentInfos);
         return houseDetailVo;

@@ -7,8 +7,8 @@ import java.io.Serializable;
 /**
  * 后端统一返回结果
  *
- * @author zank
  * @param <T>
+ * @author zank
  */
 @Data
 public class Result<T> implements Serializable {
@@ -21,14 +21,14 @@ public class Result<T> implements Serializable {
     //数据
 
     public static <T> Result<T> success() {
-        Result<T> result = new Result<T>();
+        Result<T> result = new Result<>();
         result.code = 200;
         result.message = "success";
         return result;
     }
 
     public static <T> Result<T> success(T object) {
-        Result<T> result = new Result<T>();
+        Result<T> result = new Result<>();
         result.data = object;
         result.code = 200;
         result.message = "success";

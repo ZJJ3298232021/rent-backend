@@ -15,7 +15,7 @@ import java.util.List;
 public class HistoryVo {
     private Integer id;
     private String date;
-    private Integer houseId;
+    private String houseId;
     private String img;
     private String title;
     private String subTitle;

@@ -5,9 +5,9 @@
 <mapper namespace="site.webzank.rent.mapper.HomeNavMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HomeNav">
-            <id property="id" column="id" />
-            <result property="title" column="title" />
-            <result property="imageUrl" column="image_url" />
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="imageUrl" column="image_url"/>
     </resultMap>
 
 

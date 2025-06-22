@@ -1,6 +1,5 @@
 package site.webzank.rent.service.impl;
 
-import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,10 +17,11 @@ import java.io.UnsupportedEncodingException;
 @Slf4j
 @RequiredArgsConstructor
 public class MailService {
-    private final JavaMailSender  mailSender;
+    private final JavaMailSender mailSender;
     @Value("${spring.mail.username}")
     private String username;
-    public void sendMail(String to , int code) throws Exception, UnsupportedEncodingException {
+
+    public void sendMail(String to, int code) throws Exception, UnsupportedEncodingException {
         log.info("发送邮件开始");
         log.info("收件人：{}", to);
         log.info("验证码：{}", code);
@@ -55,27 +55,27 @@ public class MailService {
                 """
                 + code +
                 """
-                            </p>
+                                    </p>
+                                    </div>
+                                   \s
+                                    <!-- 提示信息 -->
+                                    <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 验证码有效期为<span style="color: #1B81F6; font-weight: bold;">5分钟</span>，请尽快完成验证。</p>
+                                    <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 如非本人操作，请忽略此邮件，并及时修改您的账户密码。</p>
+                                    <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 20px;">• 请勿将验证码泄露给他人，咕咕租房不会以任何理由要求您提供验证码。</p>
+                                   \s
+                                    <p style="font-size: 16px; line-height: 1.6; margin-top: 30px;">祝您租房愉快！</p>
+                                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 0;">咕咕租房团队</p>
+                                </div>
+                               \s
+                                <!-- 页脚 -->
+                                <div style="text-align: center; border-top: 1px solid #eeeeee; padding-top: 20px; font-size: 12px; color: #999999;">
+                                    <p style="margin-bottom: 10px;">此邮件由系统自动发送，请勿直接回复</p>
+                                    <p style="margin: 0;">如有问题，请联系客服：www.webzank.site</p>
+                                </div>
                             </div>
-                           \s
-                            <!-- 提示信息 -->
-                            <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 验证码有效期为<span style="color: #1B81F6; font-weight: bold;">5分钟</span>，请尽快完成验证。</p>
-                            <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 10px;">• 如非本人操作，请忽略此邮件，并及时修改您的账户密码。</p>
-                            <p style="font-size: 14px; line-height: 1.6; color: #666666; margin-bottom: 20px;">• 请勿将验证码泄露给他人，咕咕租房不会以任何理由要求您提供验证码。</p>
-                           \s
-                            <p style="font-size: 16px; line-height: 1.6; margin-top: 30px;">祝您租房愉快！</p>
-                            <p style="font-size: 16px; line-height: 1.6; margin-bottom: 0;">咕咕租房团队</p>
-                        </div>
-                       \s
-                        <!-- 页脚 -->
-                        <div style="text-align: center; border-top: 1px solid #eeeeee; padding-top: 20px; font-size: 12px; color: #999999;">
-                            <p style="margin-bottom: 10px;">此邮件由系统自动发送，请勿直接回复</p>
-                            <p style="margin: 0;">如有问题，请联系客服：www.webzank.site</p>
-                        </div>
-                    </div>
-                </body>
-                </html>\s
-                """;
+                        </body>
+                        </html>\s
+                        """;
 
         // 创建 MimeMessageHelper
         MimeMessageHelper helper = new MimeMessageHelper(message, false);

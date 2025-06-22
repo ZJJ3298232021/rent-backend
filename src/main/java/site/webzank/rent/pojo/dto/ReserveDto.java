@@ -9,7 +9,7 @@ import lombok.Data;
 public class ReserveDto {
     private String name;
     private String date;
-    private Integer houseId;
+    private String houseId;
     private String phone;
     private String comment;
 }

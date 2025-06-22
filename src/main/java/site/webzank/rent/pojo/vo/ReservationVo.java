@@ -11,7 +11,7 @@ import lombok.Data;
 public class ReservationVo {
     private Integer id;
     private Integer userId;
-    private Integer houseId;
+    private String houseId;
     private String date;
     private String name;
     private String comment;

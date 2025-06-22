@@ -15,6 +15,7 @@ import site.webzank.rent.common.result.Result;
 @RequiredArgsConstructor
 public class GlobalExceptionHandler {
     private final Gson gson = new Gson();
+
     @ExceptionHandler(Exception.class)
     public String exceptionHandler(Exception e) {
         log.error("服务器发生异常：{}", e.getMessage());

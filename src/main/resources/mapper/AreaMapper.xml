@@ -5,10 +5,10 @@
 <mapper namespace="site.webzank.rent.mapper.AreaMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.Area">
-            <id property="code" column="code" />
-            <result property="name" column="name" />
-            <result property="cityCode" column="city_code" />
-            <result property="provinceCode" column="province_code" />
+        <id property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="cityCode" column="city_code"/>
+        <result property="provinceCode" column="province_code"/>
     </resultMap>
 
 

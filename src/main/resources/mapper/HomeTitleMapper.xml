@@ -5,10 +5,10 @@
 <mapper namespace="site.webzank.rent.mapper.HomeTitleMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HomeTitle">
-            <id property="id" column="id" />
-            <result property="imageUrl" column="image_url" />
-            <result property="title" column="title" />
-            <result property="subTitle" column="sub_title" />
+        <id property="id" column="id"/>
+        <result property="imageUrl" column="image_url"/>
+        <result property="title" column="title"/>
+        <result property="subTitle" column="sub_title"/>
     </resultMap>
 
 

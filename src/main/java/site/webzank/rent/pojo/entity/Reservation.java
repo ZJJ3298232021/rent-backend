@@ -8,46 +8,45 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * 
  * @author zank
  * @TableName reservation
  */
-@TableName(value ="reservation")
+@TableName(value = "reservation")
 @Data
 @Builder
 public class Reservation {
     /**
-     * 
+     *
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     *
      */
     @TableField(value = "user_id")
     private Integer userId;
 
     /**
-     * 
+     *
      */
     @TableField(value = "house_id")
-    private Integer houseId;
+    private String houseId;
 
     /**
-     * 
+     *
      */
     @TableField(value = "date")
     private String date;
 
     /**
-     * 
+     *
      */
     @TableField(value = "name")
     private String name;
 
     /**
-     * 
+     *
      */
     @TableField(value = "comment")
     private String comment;

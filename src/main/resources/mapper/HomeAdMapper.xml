@@ -5,8 +5,8 @@
 <mapper namespace="site.webzank.rent.mapper.HomeAdMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HomeAd">
-            <id property="id" column="id" />
-            <result property="imageUrl" column="image_url" />
+        <id property="id" column="id"/>
+        <result property="imageUrl" column="image_url"/>
     </resultMap>
 
 

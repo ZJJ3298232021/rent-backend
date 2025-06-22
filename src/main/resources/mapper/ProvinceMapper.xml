@@ -5,8 +5,8 @@
 <mapper namespace="site.webzank.rent.mapper.ProvinceMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.Province">
-            <id property="code" column="code" />
-            <result property="name" column="name" />
+        <id property="code" column="code"/>
+        <result property="name" column="name"/>
     </resultMap>
 
 

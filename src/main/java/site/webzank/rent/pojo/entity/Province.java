@@ -6,21 +6,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
- * 
  * @author zank
  * @TableName province
  */
-@TableName(value ="province")
+@TableName(value = "province")
 @Data
 public class Province {
     /**
-     * 
+     *
      */
     @TableId(value = "code")
     private Integer code;
 
     /**
-     * 
+     *
      */
     @TableField(value = "name")
     private String name;

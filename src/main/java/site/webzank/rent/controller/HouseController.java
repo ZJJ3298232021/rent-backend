@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import site.webzank.rent.common.result.PageResult;
 import site.webzank.rent.common.result.Result;
-import site.webzank.rent.mapper.HouseInfoMapper;
 import site.webzank.rent.pojo.dto.PageSearchDto;
-import site.webzank.rent.pojo.vo.HomeVo;
 import site.webzank.rent.pojo.vo.HouseDetailVo;
 import site.webzank.rent.pojo.vo.HouseVo;
 import site.webzank.rent.service.HouseInfoService;
@@ -35,7 +33,7 @@ public class HouseController {
                     "data": [
                         {
                             "id": "BJ1841694485952593920",
-                            "housePicture": "http://192.168.137.1:6060/public/room83.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room83.jpg",
                             "tags": [
                                 {
                                     "name": "官方核验"
@@ -55,7 +53,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1836732325094752256",
-                            "housePicture": "http://192.168.137.1:6060/public/room12.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room12.jpg",
                             "tags": [
                                 {
                                     "name": "官方核验"
@@ -78,7 +76,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1602527991374544896",
-                            "housePicture": "http://192.168.137.1:6060/public/room70.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room70.jpg",
                             "tags": [
                                 {
                                     "name": "月租"
@@ -104,7 +102,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1844671495528251392",
-                            "housePicture": "http://192.168.137.1:6060/public/room19.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room19.jpg",
                             "tags": [
                                 {
                                     "name": "官方核验"
@@ -130,7 +128,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1786352103019511808",
-                            "housePicture": "http://192.168.137.1:6060/public/room59.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room59.jpg",
                             "tags": [
                                 {
                                     "name": "近地铁"
@@ -156,7 +154,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1842778538210492416",
-                            "housePicture": "http://192.168.137.1:6060/public/room76.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room76.jpg",
                             "tags": [
                                 {
                                     "name": "官方核验"
@@ -179,7 +177,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1854906983803518976",
-                            "housePicture": "http://192.168.137.1:6060/public/room11.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room11.jpg",
                             "tags": [
                                 {
                                     "name": "新上"
@@ -205,7 +203,7 @@ public class HouseController {
                         },
                         {
                             "id": "BJ1852575117964476416",
-                            "housePicture": "http://192.168.137.1:6060/public/room93.jpg",
+                            "housePicture": "http://192.168.216.1:6060/public/room93.jpg",
                             "tags": [
                                 {
                                     "name": "官方核验"

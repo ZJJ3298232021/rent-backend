@@ -1,21 +1,24 @@
 server:
+  # 应用端口
   port: 6060
 spring:
   application:
     name: rent-service
   datasource:
+    # 数据库
     url: jdbc:mysql://localhost:3306/zk_rent
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   mail:
-    # qq
+    # qq邮箱
     host: smtp.qq.com
     port: 465
-    username: 3298232021@qq.com
+    # 邮箱用户名
+    username: ？？
     # 授权码
-    password: jvkardachitydcbj
+    password: ？？
     properties:
       mail:
         smtp:
@@ -28,6 +31,7 @@ spring:
           socketFactory:
             port: 465
             class: javax.net.ssl.SSLSocketFactory
+  # redis 有密码加上password配置
   data:
     redis:
       database: 10
@@ -35,9 +39,11 @@ spring:
       port: 6379
 mybatis-plus:
   configuration:
+    # 驼峰命名
     map-underscore-to-camel-case: true
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: site.webzank.rent.pojo.entity
   global-config:
+    # 关闭banner
     banner: off

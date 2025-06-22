@@ -15,11 +15,12 @@ import site.webzank.rent.interceptor.AuthInterceptor;
 @RequiredArgsConstructor
 public class WebConfig implements WebMvcConfigurer {
     private final AuthInterceptor authInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         log.info("拦截器已加载");
         registry.addInterceptor(authInterceptor)
                 .addPathPatterns("/auth/**")
-                ;
+        ;
     }
 }

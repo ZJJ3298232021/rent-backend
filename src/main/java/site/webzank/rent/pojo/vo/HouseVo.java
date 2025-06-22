@@ -4,7 +4,6 @@ import lombok.Builder;
 import lombok.Data;
 import site.webzank.rent.pojo.dto.TagDto;
 import site.webzank.rent.pojo.entity.Activity;
-import site.webzank.rent.pojo.entity.HouseTag;
 
 import java.util.List;
 

@@ -25,11 +25,11 @@ public class HomeController {
     public Result<HomeVo> getHomeInfo() {
         log.info("获取首页信息");
         HomeVo homeVo = new HomeVo();
-        homeVo.setAdPicture("http://192.168.137.1:6060"+homeAdService.list().get(0).getImageUrl());
-        homeVo.setBannerList(homeBannerService.list().stream().peek(homeBanner -> homeBanner.setImageURL("http://192.168.137.1:6060" + homeBanner.getImageURL())).toList());
-        homeVo.setTileList(homeTitleService.list().stream().peek(homeTitle -> homeTitle.setImageURL("http://192.168.137.1:6060" + homeTitle.getImageURL())).toList());
-        homeVo.setPlanList(homePlanService.list().stream().peek(homePlan -> homePlan.setImageURL("http://192.168.137.1:6060" + homePlan.getImageURL())).toList());
-        homeVo.setNavList(homeNavService.list().stream().peek(homeNav -> homeNav.setImageURL("http://192.168.137.1:6060" + homeNav.getImageURL())).toList());
+        homeVo.setAdPicture("http://192.168.216.1:6060" + homeAdService.list().get(0).getImageUrl());
+        homeVo.setBannerList(homeBannerService.list().stream().peek(homeBanner -> homeBanner.setImageURL("http://192.168.216.1:6060" + homeBanner.getImageURL())).toList());
+        homeVo.setTileList(homeTitleService.list().stream().peek(homeTitle -> homeTitle.setImageURL("http://192.168.216.1:6060" + homeTitle.getImageURL())).toList());
+        homeVo.setPlanList(homePlanService.list().stream().peek(homePlan -> homePlan.setImageURL("http://192.168.216.1:6060" + homePlan.getImageURL())).toList());
+        homeVo.setNavList(homeNavService.list().stream().peek(homeNav -> homeNav.setImageURL("http://192.168.216.1:6060" + homeNav.getImageURL())).toList());
         return Result.success(homeVo);
     }
 }

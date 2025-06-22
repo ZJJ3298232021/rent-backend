@@ -5,15 +5,15 @@
 <mapper namespace="site.webzank.rent.mapper.HouseInfoMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HouseInfo">
-            <id property="id" column="id" />
-            <result property="data" column="data" />
-            <result property="hdicDistrictName" column="hdic_district_name" />
-            <result property="rentPriceUnitListing" column="rent_price_unit_listing" />
-            <result property="rentArea" column="rent_area" />
-            <result property="payment" column="payment" />
-            <result property="areaCode" column="area_code" />
-            <result property="cityCode" column="city_code" />
-            <result property="provinceCode" column="province_code" />
+        <id property="id" column="id"/>
+        <result property="data" column="data"/>
+        <result property="hdicDistrictName" column="hdic_district_name"/>
+        <result property="rentPriceUnitListing" column="rent_price_unit_listing"/>
+        <result property="rentArea" column="rent_area"/>
+        <result property="payment" column="payment"/>
+        <result property="areaCode" column="area_code"/>
+        <result property="cityCode" column="city_code"/>
+        <result property="provinceCode" column="province_code"/>
     </resultMap>
 
 

@@ -5,8 +5,8 @@
 <mapper namespace="site.webzank.rent.mapper.HouseDetailMapper">
 
     <resultMap id="BaseResultMap" type="site.webzank.rent.pojo.entity.HouseDetail">
-            <id property="id" column="id" />
-            <result property="data" column="data" />
+        <id property="id" column="id"/>
+        <result property="data" column="data"/>
     </resultMap>
 
 </mapper>
